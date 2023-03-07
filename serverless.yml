@@ -1,0 +1,35 @@
+service: jetpack-test
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+plugins:
+  - serverless-jetpack
+
+functions:
+  myFunction:
+    name: 'myFunction'
+    handler: main.handler
+
+    jetpack:
+      preInclude:
+        - 'files/function-pre-include.txt'
+        - '!files/function-pre-exclude.txt'
+    
+    package:
+      include:
+        - 'files/function-include.txt'
+        - '!files/function-exclude.txt'
+
+custom:
+  jetpack:
+    preInclude:
+      - '!**/**'
+      - 'files/service-pre-include.txt'
+      - '!files/service-pre-exclude.txt'
+
+package:
+  include:
+    - 'files/package-include.txt'
+    - '!files/package-exclude.txt'
