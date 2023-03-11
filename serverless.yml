@@ -1,8 +1,10 @@
-service: jetpack-test
+service: layer-test
 
 provider:
   name: aws
   runtime: nodejs14.x
+  region: sa-east-1
+  profile: daniel
 
 plugins:
   - serverless-jetpack
@@ -11,25 +13,25 @@ functions:
   myFunction:
     name: 'myFunction'
     handler: main.handler
-
-    jetpack:
-      preInclude:
-        - 'files/function-pre-include.txt'
-        - '!files/function-pre-exclude.txt'
-    
     package:
       include:
-        - 'files/function-include.txt'
-        - '!files/function-exclude.txt'
+        - 'main.js'
+        - '!node_modules'
+    layers:
+      - !Ref NodeModulesLambdaLayer
 
+layers:
+  NodeModules:
+    jetpack:
+      roots:
+        - ./nodejs
+    include:
+      - node_modules
+
+package:
+  individually: true
+  
 custom:
   jetpack:
     preInclude:
-      - '!**/**'
-      - 'files/service-pre-include.txt'
-      - '!files/service-pre-exclude.txt'
-
-package:
-  include:
-    - 'files/package-include.txt'
-    - '!files/package-exclude.txt'
+      - '!**'

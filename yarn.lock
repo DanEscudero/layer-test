@@ -2707,7 +2707,7 @@ semver@^7.3.5, semver@^7.3.7, semver@^7.3.8:
   dependencies:
     lru-cache "^6.0.0"
 
-serverless-jetpack@^0.11.1:
+serverless-jetpack@0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/serverless-jetpack/-/serverless-jetpack-0.11.1.tgz#1ac4213c5021def698034d94e965b55e5296bd64"
   integrity sha512-pcis7Dc//x++PZwqUMapmQOC210WqSvUI2vX49TWeJ2CRtZLDeyvw4SgjD8vx+cyivWUy7HH1RXreu2tO4QNgw==
@@ -2721,7 +2721,7 @@ serverless-jetpack@^0.11.1:
     p-limit "^3.1.0"
     trace-deps "^0.4.0"
 
-serverless@^3.28.1:
+serverless@3.28.1:
   version "3.28.1"
   resolved "https://registry.yarnpkg.com/serverless/-/serverless-3.28.1.tgz#2bdd90984a2d9dbd64694a57ee9105f4b0cffa9b"
   integrity sha512-zC+8ItbRYtJkIY5YZkU5RrCGd+JPkn8DUeGpHX6C9NKV/555DppiaMXURcNWJqN6VFV3fhmZrtefTzDF/B6+Rg==
