@@ -15,3 +15,5 @@ Para conseguir fazer esse zip:
 		ln -s ../package.json package.json
 		ln -s ../node_modules node_modules
 		cd ..
+
+Importante adicionar a flag `individually: true` na sessão package do serverless.yml
