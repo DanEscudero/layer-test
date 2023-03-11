@@ -16,4 +16,4 @@ Para conseguir fazer esse zip:
 		ln -s ../node_modules node_modules
 		cd ..
 
-Importante adicionar a flag `individually: true` na sessão package do serverless.yml
+Importante adicionar a flag `individually: true` na sessão package do serverless.yml (https://github.com/FormidableLabs/serverless-jetpack/issues/352)
